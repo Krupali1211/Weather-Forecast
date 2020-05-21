@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Current Weather</title> 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet"> 
+  <style>
+  body
+  {
+    background-image:url("images/cloud.jpg");
+  }
+
+  #current
+  {
+    text-align: center;
+
+  }
+  .temperature {
+    font-size: 25px;
+  }
+  table{
+    text-align: center;
+    border: black solid 1px;
+    margin-left:auto; 
+    margin-right:auto; 
+    width:80%;
+  }
+  th{
+    font-size: 20px;
+  }
+  </style>
+</head>
+<body>
+<header>
+  <h1 style="color: white; text-align: center;"><b>WEATHER FORECAST</b>
+     <button style="float: right;">&deg;C</button> 
+    <button style="float: right;" > &deg;F</button></h1>
+  <br><br>
+</header>
+  <main>
+    
+      <section id="current" style="width: 100%;">
+          <h2>Current Weather of Montreal</h2>
+          <p class="hour">Time: <span class="val"></span></p>
+          <p class="temperature"> <span class="val"></span></p>
+          <p class="icon"><img src="" alt="" class="val" /></p>
+          <p class="description">Sky is <span class="val"></span></p>          
+      </section>
+
+        <div style="text-align: center;">
+              <label id="select">Select a city: </label>
+              <select id="select_city" name="select_city">
+                  <option value="Montreal" data-class="verso">Montreal</option>
+                  <option value="Arizona" data-class="as">Arizona</option>
+                  <option value="North-Carolina" data-class="quatre">North-Carolina</option>
+                  <option value="Gujarat" data-class="deux">Gujarat</option>
+                  <option value="Toronto" data-class="trois">Toronto</option>
+                  
+              </select>
+              <button id="search" class="search"> Search </button>
+        </div><br><br><br>
+  <div style="text-align: center;">
+    <table id="for_forecast">
+        <thead>
+            <tr><th>Time</th><th>Temperature</th><th>Wind speed</th><th>Icon</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+            <tr class="for_data">
+                <td class="time"></td>
+                <td class="temperature"></td>
+                <td class="wind"></td>
+                <td class="icon"><img src="" alt="" /></td>
+                <td class="description"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+  </main>
+  <script src="script/main.js"></script>
+</body>
+</html>
